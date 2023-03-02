@@ -1,0 +1,38 @@
+<%- include('partials/header'); -%>
+<!-- Renders the header section of the page, which is  a separate ejs file that contains the common header code for all pages -->
+
+<h1>Compose</h1>
+<!-- Renders the compose page heading -->
+
+<form action="/compose" method="POST">
+  <!-- Creates a form with a post method that submits the data to the '/compose' route -->
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      class="form-control"
+      name="postTitle"
+      placeholder="Title"
+    />
+    <!-- Creates a text input field for the post title, with a name attribute of "postTitle" and a placeholder text of "Title" -->
+    <label for="postTitle"></label>
+    <!-- Creates a label for the text input field -->
+  </div>
+
+  <div class="form-floating mb-3">
+    <textarea
+      class="form-control"
+      placeholder="Post"
+      name="postBody"
+      style="height: 100px"
+    ></textarea>
+    <!-- Creates a textarea input field for the post body, with a name attribute of "postBody" and a placeholder text of "Post" -->
+    <label for="postBody"></label>
+    <!-- Creates a label for the textarea input field -->
+  </div>
+
+  <button class="btn btn-primary" type="submit">Publish</button>
+  <!-- Creates a submit button with text "Publish" -->
+</form>
+
+<%- include('partials/footer'); -%>
+<!-- Includes the footer partial, which is a separate ejs file that contains the common footer code for all pages -->
